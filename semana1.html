@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 1 - Lectura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="lectura-container">
+        <h2>QUE PENA!</h2>
+        <p>
+            Hay mundos que imaginé,<br>
+y hay mundos que no supe que existían<br>
+hasta que te vi ese día.<br>
+<br>
+No te busco porque deba encontrarte,<br>
+te busco porque estar cerca<br>
+hace que lo cotidiano se sienta<br>
+como algo para recordar.<br>
+<br>
+Si hay una historia aquí,<br>
+que sea una que podamos escribir<br>
+sin miedo,
+sin prisa,
+solo tu y yo.
+        
+        </p>
+        
+        <a href="espejo.html">continuar</a> <br>
+        <a href="https://youtu.be/Zv0BMaVYYAM?si=PIjcdJ5Ipm2611wn">CANCIÓN DE FONDO</a>
+    </div>
+<audio id="sorpresaAudio" autoplay muted>
+    <source src="you.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    // Obtén el elemento de audio
+    const audio = document.getElementById("sorpresaAudio");
+
+    // Intenta desactivar el mute después de un breve retraso
+    setTimeout(() => {
+        audio.currentTime = 10; // Ajusta el tiempo de inicio según sea necesario
+        audio.muted = false; // Desactiva el mute
+    }, 1000); // 1 segundo de retraso (ajusta según sea necesario)
+</script>
+</body>
+</html>

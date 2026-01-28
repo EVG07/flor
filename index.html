@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us</title>
+
+    
+    <link rel="stylesheet" href="book.css">
+</head>
+
+
+   
+    <body onbeforeunload="sessionStorage.setItem('scroll', window.scrollY)" 
+      onload="window.scrollTo(0, sessionStorage.getItem('scroll'))">
+  <div class="book" id="book">
+    <!-- Portada izquierda -->
+    <div class="page cover" id="cover-left">
+      <div class="content">
+        <h1>Bitacora Rabanita</h1>
+        <h3>Contenido Semanal</h3>
+        <p>HOLAAAAAAAAAAA cree una pagina web para que puedas ver todo los detalles que te programare, espero que te guste mucho y que la disfrutes tanto como yo disfrute escribiendola para ti  :)
+        </p>
+      </div>
+    </div>
+
+    <!-- Páginas del libro -->
+    <div class="page" id="p1">
+        <div class="content contenedor-tit">
+          <h1>FLOOR</h1>
+          <p></p>
+          <button onclick="entrar_f()">Entrar</button>
+        </div>
+    </div>
+
+
+    <div class="page" id="p2">
+     <div class="content contenedor-tit">
+        <h1>PARA LA N°1</h1>
+        <p></p>
+        <button onclick="entrar_r()">Entrar</button>
+      </div>
+    </div>
+
+    <div class="page" id="p3">
+      <div class="content contenedor-tit">
+        <h1>DETALLE 1</h1>
+        <p></p>
+        <button onclick="entrar(1)">Entrar</button>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+      <button class="btn" id="prev">← Anterior</button>
+      <button class="btn" id="next">Siguiente →</button>
+    </div>
+  </div>
+
+<script>
+  const pages = document.querySelectorAll('.page:not(.cover)');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
+  let current = 0;
+
+  function updateZIndex() {
+    pages.forEach((page, index) => {
+      page.style.zIndex = pages.length - index;
+    });
+  }
+
+  updateZIndex();
+
+  function regresar(){
+    pages.forEach(page => page.classList.remove('flipped'));
+    current = 0;
+  }
+
+  next.addEventListener('click', () => {
+    if (current < pages.length) {
+      pages[current].classList.add('flipped');
+      current++;
+    }else{
+      regresar();
+    }
+  });
+
+  prev.addEventListener('click', () => {
+    if (current > 0) {
+      current--;
+      pages[current].classList.remove('flipped');
+    }else{
+      pages.forEach(page => page.classList.add('flipped'));
+      current = pages.length;
+    }
+  });
+
+  function entrar_f(){
+    window.location.href="flor.html";
+  }
+    function entrar_r(){
+    window.location.href="rabanito.html";
+  }
+
+  function entrar(semana) {
+    sessionStorage.setItem('ultimaSemana', semana);
+    window.location.href = `semana${semana}.html`;
+  }
+</script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<script>
+    function playaudio() {
+        var audio = new Audio('fondo.mp3');
+        audio.play();
+
+    }
+
+</script>
+
