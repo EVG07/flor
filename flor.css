@@ -96,7 +96,7 @@ body {
     height: 100%;
     filter: blur(0.2vmin);
     /* Sutil mejora en el filtro */
-    background-image: radial-gradient(ellipse at top, transparent 0%, #5a1753), radial-gradient(ellipse at bottom, #000000, rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(255 146 231), rgb(240, 240, 240));
+    background-image: radial-gradient(ellipse at top, transparent 0%, #ff5454), radial-gradient(ellipse at bottom, #000000, rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(255 146 231), rgb(240, 240, 240));
     box-shadow: inset 0 0 20vmin rgba(0, 0, 0, 0.6), 0 10vmin 30vmin rgba(0, 0, 0, 0.3);
     /* Sombra de fondo más envolvente */
 }
@@ -287,7 +287,7 @@ body {
     height: 11vmin;
     border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
     background-color: #1aaa15;
-    background-image:  linear-gradient(to top, #ff00e2, #ebc1eb);
+    background-image:  linear-gradient(to top, #18091a, #ff00ff);
     transform-origin: bottom center;
     opacity: 0.9;
     box-shadow: inset 0 0 4vmin rgba(255, 255, 255, 0.3), 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
@@ -435,7 +435,7 @@ body {
 }
 
 .flower__light:nth-child(odd) {
-    background-color: #ffd03dbf;
+    background-color: #f50d0dbf;
 }
 
 .flower__light--1 {
